@@ -1,0 +1,15 @@
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\bin\Debug\Keizibansystem.exe.config
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\bin\Debug\Keizibansystem.exe
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\bin\Debug\Keizibansystem.pdb
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\obj\Debug\Keizibansystem.csprojAssemblyReference.cache
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\obj\Debug\Keizibansystem.Form1.resources
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\obj\Debug\Keizibansystem.Properties.Resources.resources
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\obj\Debug\Keizibansystem.csproj.GenerateResource.cache
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\obj\Debug\Keizibansystem.exe
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\obj\Debug\Keizibansystem.pdb
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\bin\Debug\Newtonsoft.Json.dll
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\bin\Debug\Newtonsoft.Json.xml
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\obj\Debug\Keizibansystem.writeForm.resources
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\obj\Debug\Keizibansystem.csproj.CopyComplete
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\obj\Debug\Keizibansystem.loginForm.resources
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\obj\Debug\Keizibansystem.detailForm.resources
