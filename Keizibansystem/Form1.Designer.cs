@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.listView1 = new System.Windows.Forms.ListView();
             this.number = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -57,7 +58,7 @@
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(15, 46);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(1107, 429);
             this.listView1.TabIndex = 0;
@@ -97,7 +98,7 @@
             // refreshbtn
             // 
             this.refreshbtn.Location = new System.Drawing.Point(15, 13);
-            this.refreshbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.refreshbtn.Margin = new System.Windows.Forms.Padding(4);
             this.refreshbtn.Name = "refreshbtn";
             this.refreshbtn.Size = new System.Drawing.Size(131, 25);
             this.refreshbtn.TabIndex = 1;
@@ -108,7 +109,7 @@
             // writeBtn
             // 
             this.writeBtn.Location = new System.Drawing.Point(154, 13);
-            this.writeBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.writeBtn.Margin = new System.Windows.Forms.Padding(4);
             this.writeBtn.Name = "writeBtn";
             this.writeBtn.Size = new System.Drawing.Size(131, 25);
             this.writeBtn.TabIndex = 2;
@@ -144,7 +145,8 @@
             this.Controls.Add(this.refreshbtn);
             this.Controls.Add(this.listView1);
             this.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "ChatNote";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);

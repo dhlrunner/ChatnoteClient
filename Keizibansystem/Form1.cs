@@ -51,18 +51,26 @@ namespace Keizibansystem
         }
         private void refresh()
         {
-            JArray dn = new JArray();
-            using (WebClient wc = new WebClient())
+            try
             {
-                dn = JArray.Parse(Encoding.UTF8.GetString(wc.DownloadData(mainURL + "/getMainDB")));
+                JArray dn = new JArray();
+                using (WebClient wc = new WebClient())
+                {
+                    dn = JArray.Parse(Encoding.UTF8.GetString(wc.DownloadData(mainURL + "/getMainDB")));
+                }
+                listView1.Items.Clear();
+                foreach (var d in dn)
+                {
+                    listView1.Items.Add(new ListViewItem(new string[] { d["index"].ToString(), d["title"].ToString(),
+                d["likes"].ToString(), d["commentCount"].ToString(),d["author"].ToString(),DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(d["timestamp"])).LocalDateTime.ToString()}));
+                }
+                db = new JArray(dn);
             }
-            listView1.Items.Clear();
-            foreach(var d in dn)
+            catch (WebException)
             {
-                listView1.Items.Add(new ListViewItem(new string[] { d["index"].ToString(), d["title"].ToString(),
-                d["likes"].ToString(), d["commentCount"].ToString(),d["author"].ToString(),DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(d["timestamp"])).LocalDateTime.ToString()})) ;
+                MessageBox.Show("サーバに接続できません。","エラー",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-            db = new JArray(dn);
+           
         }
         private void writeBtn_Click(object sender, EventArgs e)
         {

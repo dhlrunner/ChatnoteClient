@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(detailForm));
             this.titlelabel = new System.Windows.Forms.Label();
             this.authorlabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -141,6 +142,7 @@
             this.Controls.Add(this.authorlabel);
             this.Controls.Add(this.titlelabel);
             this.Font = new System.Drawing.Font("UD Digi Kyokasho N-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
             this.Name = "detailForm";
             this.Text = "detailForm";
