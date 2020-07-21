@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="commentWriteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="commentWriteForm.Designer.cs">
+      <DependentUpon>commentWriteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="detailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <Compile Include="writeForm.Designer.cs">
       <DependentUpon>writeForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="commentWriteForm.resx">
+      <DependentUpon>commentWriteForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="detailForm.resx">
       <DependentUpon>detailForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -13,3 +13,4 @@ C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\obj\Debug\Keizibansystem
 C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\obj\Debug\Keizibansystem.csproj.CopyComplete
 C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\obj\Debug\Keizibansystem.loginForm.resources
 C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\obj\Debug\Keizibansystem.detailForm.resources
+C:\Users\DHL\source\repos\Keizibansystem\Keizibansystem\obj\Debug\Keizibansystem.commentWriteForm.resources

@@ -62,7 +62,8 @@ namespace Keizibansystem
                 foreach (var d in dn)
                 {
                     listView1.Items.Add(new ListViewItem(new string[] { d["index"].ToString(), d["title"].ToString(),
-                d["likes"].ToString(), d["commentCount"].ToString(),d["author"].ToString(),DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(d["timestamp"])).LocalDateTime.ToString()}));
+                        d["likes"].ToString(), d["commentCount"].ToString(),
+                        d["author"].ToString(),DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(d["timestamp"])).LocalDateTime.ToString()}));
                 }
                 db = new JArray(dn);
             }
@@ -97,8 +98,7 @@ namespace Keizibansystem
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
             if (listView1.SelectedItems.Count == 1)
-            {
-                
+            {               
                 ListView.SelectedListViewItemCollection items = listView1.SelectedItems;
                 ListViewItem lvItem = items[0];
                 string index = lvItem.SubItems[0].Text;

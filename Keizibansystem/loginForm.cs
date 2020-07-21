@@ -29,14 +29,19 @@ namespace Keizibansystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
             if (!checkBox1.Checked)
             {
                 if (textBox1.Text != string.Empty)
                 {
-                    this.Hide();
+                    textBox1.Enabled = false;
+                    button1.Enabled = false;
+                    checkBox1.Enabled = false;
+                    label2.Visible = true;
                     var form1 = new Form1(textBox1.Text);
                     form1.Closed += (s, args) => this.Close();
                     form1.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -45,10 +50,15 @@ namespace Keizibansystem
             }
             else
             {
-                this.Hide();
+
+                textBox1.Enabled = false;
+                button1.Enabled = false;
+                checkBox1.Enabled = false;
+                label2.Visible = true;
                 var form1 = new Form1(string.Empty);
                 form1.Closed += (s, args) => this.Close();
                 form1.Show();
+                this.Hide();
 
             }
         }

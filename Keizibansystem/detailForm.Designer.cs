@@ -37,6 +37,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.datelabel = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.author = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.message = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // titlelabel
@@ -63,42 +67,51 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(511, 701);
+            this.button1.Location = new System.Drawing.Point(556, 706);
             this.button1.Margin = new System.Windows.Forms.Padding(7, 3, 7, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 24);
             this.button1.TabIndex = 3;
             this.button1.Text = "いいね！";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(631, 701);
+            this.button2.Location = new System.Drawing.Point(676, 706);
             this.button2.Margin = new System.Windows.Forms.Padding(7, 3, 7, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(156, 24);
             this.button2.TabIndex = 3;
             this.button2.Text = "コメントを書く";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // listView1
             // 
             this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.author,
+            this.message,
+            this.date});
+            this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 471);
+            this.listView1.Location = new System.Drawing.Point(12, 486);
             this.listView1.Margin = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(779, 216);
+            this.listView1.Size = new System.Drawing.Size(824, 206);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 450);
+            this.label3.Location = new System.Drawing.Point(16, 465);
             this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 18);
@@ -108,7 +121,7 @@
             // datelabel
             // 
             this.datelabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.datelabel.Location = new System.Drawing.Point(382, 47);
+            this.datelabel.Location = new System.Drawing.Point(427, 47);
             this.datelabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.datelabel.Name = "datelabel";
             this.datelabel.Size = new System.Drawing.Size(405, 18);
@@ -124,15 +137,41 @@
             this.richTextBox1.Location = new System.Drawing.Point(12, 77);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(779, 350);
+            this.richTextBox1.Size = new System.Drawing.Size(824, 355);
             this.richTextBox1.TabIndex = 7;
             this.richTextBox1.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("UD Digi Kyokasho N-R", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(401, 435);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(431, 48);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "♥ 0";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // author
+            // 
+            this.author.Text = "名前";
+            this.author.Width = 110;
+            // 
+            // message
+            // 
+            this.message.Text = "コメント";
+            this.message.Width = 500;
+            // 
+            // date
+            // 
+            this.date.Text = "日付";
+            this.date.Width = 200;
             // 
             // detailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(803, 737);
+            this.ClientSize = new System.Drawing.Size(848, 742);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.datelabel);
             this.Controls.Add(this.label3);
@@ -162,5 +201,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label datelabel;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ColumnHeader author;
+        private System.Windows.Forms.ColumnHeader message;
+        private System.Windows.Forms.ColumnHeader date;
     }
 }
